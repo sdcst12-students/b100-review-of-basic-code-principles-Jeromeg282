@@ -23,3 +23,12 @@ final balance: 1320.68
 
 """
 
+
+
+
+
+
+a=float(input("Enter annual investment: "))
+r=float(input("Enter annual interest rate as a percentage: "))
+rate = r / 100
+y=float(input("Enter number of years: "))

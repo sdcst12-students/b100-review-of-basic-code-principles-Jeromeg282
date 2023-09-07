@@ -13,3 +13,27 @@ Your program should ask the user for
 * The program will calculate the amount of interest earned and display it.
 * Appropriate formatting of the output is a requirement for this assignment
 """
+
+
+
+def interest_calculator(p, annual_rate, time):
+  rate = annual_rate / 100
+
+
+  interest = p * r * time
+
+  return interest
+
+p=float(input("Enter the initial investment: $"))
+r=float(input("Enter the annual interest rate as a percentage: "))
+time_type=input("Enter the time period (enter years, months, or days): ").lower()
+time=float(input(f"Enter the length of time in {time_type}: "))
+if time_type =="years":
+  time /=1
+elif time_type == "months":
+  time /=12
+elif time_type =="days":
+  time /=365
+
+interest_earned = interest_calculator(p, r, time)
+print(f"Your amount of earned interest is ${interest_earned: .2f}")

@@ -23,15 +23,15 @@ rate: 5%
 final balance: 1320.68
 """
 
-a=float(input("Enter annual investment: "))
-r=float(input("Enter annual interest rate as a percentage: "))
-r /= 100
-y=float(input("Enter number of years: "))
+annual=int(input("Enter annual investment: "))
+rate=int(input("Enter annual interest rate as a percentage: "))
+rate /= 100
+years=int(input("Enter number of years: "))
 initial=0
 year=1
-while year <= y:
-    initial += a
-    initial += initial * a
-    year+=1
+while year <= years:
+    initial += annual
+    initial += initial * annual
+    year += 1
 
-print(f"final balance:{initial}: ")
+print(f"final balance:{initial: .2f} ")

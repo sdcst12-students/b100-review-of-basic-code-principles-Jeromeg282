@@ -18,17 +18,17 @@ Your program should ask the user for
 
 
 
-p=float(input("Enter the initial investment: $"))
-r=float(input("Enter the annual interest rate as a percentage: "))
-time_type=input("Enter the time period enter (years, months, or days)")
-r /= 100
+initial=float(input("Enter the initial investment: $"))
+rate=float(input("Enter the annual interest rate as a percentage: "))
+time_type=input("Enter the time period enter (years, months, or days): ")
+rate /= 100
 time=float(input(f"Enter the length of time in {time_type}: "))
 if time_type.lower() == "years":
-  simple_interest = p * r * time
+  simple_interest = initial * rate * time
 elif time_type.lower() == "months":
-  simple_interest = p * r * (time/ 12)
+  simple_interest = initial * rate * (time/ 12)
 elif time_type.lower() == "days":
-  simple_interest = p * r * (time/ 365)
+  simple_interest = initial * rate * (time/ 365)
 
-interest_earned = p + simple_interest
+interest_earned = initial + simple_interest
 print(f"Your amount of earned interest is ${interest_earned: .2f}")

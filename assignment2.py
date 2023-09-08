@@ -28,13 +28,13 @@ final balance: 1320.68
 
 
 
-a=float(input("Enter annual investment: "))
-r=float(input("Enter annual interest rate as a percentage: "))
+a=int(input("Enter annual investment: "))
+r=int(input("Enter annual interest rate as a percentage: "))
 r /= 100
-y=float(input("Enter number of years: "))
+y=int(input("Enter number of years: "))
 initial=0
 for year in range(1, y+1):
     initial += a
     initial += initial * r
 
-print(f"final balance:{initial}: ")
+print(f"final balance:{initial: .2f} ")

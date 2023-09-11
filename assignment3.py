@@ -31,7 +31,9 @@ initial=0
 year=1
 while year <= years:
     initial += annual
-    initial += initial * annual
-    year += 1
+    interest = initial * rate
+    initial += interest
+    year+=1
+
 
 print(f"final balance:{initial: .2f} ")

@@ -22,20 +22,7 @@ How many months will it take him to pay off the car.  How much interest has he p
 He will have paid 21711.60 in interest
 """
 
-debt=float(input("Enter initial debt: "))
-rate=float(input("Enter annual interest rate: "))
-annual=float(input("Enter the annual payment: "))
-rate /= 100
-monthly=rate / 12
-months=0
-total_paid=0
+debt=int(input("Enter initial debt: "))
+rate=int(input("Enter annual interest rate: "))
+annual=int(input("Enter the annual payment: "))
 
-while debt > 0:
-    monthly_interest = debt * monthly
-    total_paid += monthly_interest
-    debt -= annual / 12
-
-    months += 1
-
-print(f" It will take {months} months to pay off the debt. ")
-print(f"He will have paid ${total_paid: .2f} in interest ")
